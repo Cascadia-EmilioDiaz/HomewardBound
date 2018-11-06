@@ -1,0 +1,209 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+    
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="description" content="Homeward Bound Pet Finder">
+    <meta name="author" content="Emilio Diaz">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    <title>Homeward Bound Pet Finder</title>
+    
+</head>
+    
+<body> 
+
+<!-- Home Page -->
+
+<div data-role="page" id="home" style="background-color: #1EDFA1">
+
+    <!-- /header -->
+    
+	<div data-role="header">
+		<h1>Homeward Bound</h1>
+	</div>
+
+    <!-- /content -->
+    
+	<div data-role="content">
+        
+		<Center><img src="assets/HB_Logo.gif" width="310" height="250"></Center>
+	
+    
+        <a href="#missing" class="ui-btn ui-corner-all">Report Missing Pet</a>
+    
+        <a href="#report" class="ui-btn ui-corner-all">Report Found Pet</a>
+        
+        <a href="#listings" class="ui-btn ui-corner-all">See Local Reports</a>
+        
+    </div>
+    
+    <footer data-role="footer" data-position="fixed">
+    
+        <center><p>Homeward Bound Pet Finder</p></center>
+        
+    </footer>
+
+</div>
+    
+<!-- Missing Pet Page -->
+    
+    <div data-role="page" id="missing" style="background-color: #1EDFA1">
+
+    <!-- /header -->
+    
+	<div data-role="header">
+		<h1>Homeward Bound</h1>
+        <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+
+    <!-- /content -->
+    
+	<div data-role="content">
+        
+		<Center><p>Report Missing Pet</p></Center>
+        
+        <label for="text-basic">Does the animal have a name?</label>
+        <input type="text" name="text-basic" id="text-basic" value="">
+        
+        <label for="text-basic">Color?</label>
+        <input type="text" name="text-basic" id="text-basic" value="">
+        
+        <form>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Type of animal?</legend>
+                <input type="radio" name="radio-choice-h-2" id="cat-choice-h-2a" value="on">
+                <label for="cat-choice-h-2a">Cat</label>
+                <input type="radio" name="radio-choice-h-2" id="dog-choice-h-2b" value="off">
+                <label for="dog-choice-h-2b">Dog</label>
+                <input type="radio" name="radio-choice-h-2" id="other-choice-h-2c" value="other">
+                <label for="other-choice-h-2c">Other</label>
+            </fieldset>
+        </form>
+        
+        <form>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Size of animal?</legend>
+                <input type="radio" name="radio-choice-h-2" id="small-choice-h-2a" value="on">
+                <label for="small-choice-h-2a">S</label>
+                <input type="radio" name="radio-choice-h-2" id="medium-choice-h-2b" value="off">
+                <label for="medium-choice-h-2b">M</label>
+                <input type="radio" name="radio-choice-h-2" id="large-choice-h-2c" value="other">
+                <label for="large-choice-h-2c">L</label>
+            </fieldset>
+        </form>
+        
+        <p>When were they last seen?</p>
+        <p>MM/DD/YYYY</p>
+        <input type="text" data-role="date" data-inline="true">
+        
+        <p>Where were they last seen?</p>
+        <img src="assets/googlemap.PNG">
+        
+        <a href="#thanks" class="ui-btn ui-corner-all">Submit Report</a>
+        
+	</div>
+    
+    <footer data-role="footer" data-position="fixed">
+    
+        <center><p>Homeward Bound Pet Finder</p></center>
+        
+    </footer>
+        
+    </div>
+    
+    <!-- Thanks Page -->
+    
+    <div data-role="page" id="thanks" style="background-color: #1EDFA1">
+
+    <!-- /header -->
+    
+	<div data-role="header">
+		<h1>Homeward Bound</h1>
+        <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+
+    <!-- /content -->
+    
+	<div data-role="content">
+        
+		<Center><img src="assets/HB_Logo.gif" width="150" height="100"></Center>
+	
+        <center><p>Thank you.</p></center>
+        
+        <a href="#listings" class="ui-btn ui-corner-all">See Local Reports</a>
+        
+    </div>
+    
+    <footer data-role="footer" data-position="fixed">
+    
+        <center><p>Homeward Bound Pet Finder</p></center>
+        
+    </footer>
+
+</div>
+    
+<!-- Listings Page -->
+    
+    <div data-role="page" id="listings" style="background-color: #1EDFA1">
+
+    <!-- /header -->
+    
+	<div data-role="header">
+		<h1>Homeward Bound</h1>
+        <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+
+    <!-- /content -->
+    
+<div data-role="content">
+        
+		<Center><img src="assets/HB_Logo.gif" width="150" height="100"></Center>
+	
+      <ul data-role="listview" data-split-icon="mail" data-split-theme="a" data-inset="true">
+    <li><a href="#">
+        <img src="pets/dog1.jpg">
+    <h2>Scruffy</h2>
+    <p>Denver</p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+    <li><a href="#">
+        <img src="pets/cat.jpg">
+    <h2>Dan</h2>
+    <p>Denver</p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+    <li><a href="#">
+        <img src="pets/dog2.jpg">
+    <h2>Wolfgang</h2>
+    <p>Denver </p></a>
+        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+        </ul>
+            <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+    <h3>Contact?</h3>
+                <p>You will start contact with the owners.</p>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Contact</a>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+            </div>  
+        
+</div>
+    
+    <footer data-role="footer" data-position="fixed">
+    
+        <center><p>Homeward Bound Pet Finder</p></center>
+        
+    </footer>
+
+</div>
+
+</body>
+    
+</html>

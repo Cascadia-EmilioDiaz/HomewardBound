@@ -1,0 +1,1 @@
+The purpose of the Homeward Bound app is to help those who have lost pets, or have found lost pets get in contact with their family. The app will also have the function of displaying pets that have been found and lost in your general area.
